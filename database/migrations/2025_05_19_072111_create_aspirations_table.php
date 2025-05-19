@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('aspirations', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('set null');
+            $table->string('subject');
+            $table->text('message');
             $table->timestamps();
         });
     }
