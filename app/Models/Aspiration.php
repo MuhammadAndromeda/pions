@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Aspirations extends Model
+class Aspiration extends Model
 {
     //
 }
