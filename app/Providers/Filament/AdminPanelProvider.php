@@ -24,6 +24,7 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
+            ->brandName('PIONS Admin Panel')
             ->id('admin')
             ->path('admin')
             ->login()
