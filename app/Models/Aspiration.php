@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Votes extends Model
+class Aspiration extends Model
 {
-    //
+    protected $guarded = ['id'];
+
 }
