@@ -8,4 +8,8 @@ class Event extends Model
 {
     protected $guarded = ['id'];
 
+    public function participants()
+    {
+        return $this->hasMany(Participant::class);
+    }
 }
