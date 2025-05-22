@@ -2,8 +2,11 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Widgets\ParticipantSummaryWidget;
+use App\Filament\Widgets\VotingResultsWidget;
 use Filament\Http\Middleware\Authenticate;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
+use Filament\Facades\Filament;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -25,9 +28,14 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
-            ->brandName('PIONS Admin Panel')
             ->id('admin')
             ->path('admin')
+            ->brandName('PIONS Admin Panel')
+            ->favicon(asset('/public/images/logo-panel-admin.png'))
+            ->widgets([
+                ParticipantSummaryWidget::class,
+                VotingResultsWidget::class,
+            ])
             ->login()
             ->colors([
                 'primary' => Color::Amber,

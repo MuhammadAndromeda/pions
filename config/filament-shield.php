@@ -1,6 +1,12 @@
 <?php
 
 return [
+    'default_role' => 'student', // optional: for new users
+    'allowed_roles' => [
+        'pions',
+        'super_admin',
+    ],
+
     'shield_resource' => [
         'should_register_navigation' => true,
         'slug' => 'shield/roles',

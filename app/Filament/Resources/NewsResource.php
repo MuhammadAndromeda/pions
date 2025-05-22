@@ -3,17 +3,13 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\NewsResource\Pages;
+use App\Filament\Resources\UserResource\RelationManagers;
 use App\Models\News;
-use Filament\Forms\Components\DateTimePicker;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\TextInput;
+use App\Models\User;
+use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables\Columns\ImageColumn;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\DateTimeColumn;
+use Filament\Tables;
 use Filament\Tables\Table;
 
 class NewsResource extends Resource
@@ -24,44 +20,72 @@ class NewsResource extends Resource
 
     public static function form(Form $form): Form
     {
-        return $form->schema([
-            TextInput::make('title')
-                ->required()
-                ->maxLength(255),
+        return $form
+            ->schema([
+                Forms\Components\TextInput::make('title')
+                    ->required()
+                    ->maxLength(255),
 
-            Textarea::make('content')
-                ->required()
-                ->rows(6),
+                Forms\Components\Select::make('author_id')
+                    ->required()
+                    ->label('Author')
+                    ->options(User::all()->pluck('name', 'id'))
+                    ->searchable(),
 
-            FileUpload::make('image')
-                ->image()
-                ->directory('news-images')
-                ->nullable(),
+                Forms\Components\TextArea::make('content')
+                    ->required()
+                    ->rows(6),
 
-            Select::make('author_id')
-                ->relationship('author', 'name')
-                ->required(),
+                Forms\Components\SpatieMediaLibraryFileUpload::make('image')
+                    ->collection('news')
+                    ->directory('news')
+                    ->disk('public')
+                    ->preserveFilenames(),
 
-            DateTimePicker::make('published_at')
-                ->label('Tanggal Publikasi')
-                ->nullable(),
-        ]);
+                Forms\Components\DateTimePicker::make('published_at')
+                    ->label('Tanggal Publikasi')
+                    ->nullable(),
+            ]);
     }
 
     public static function table(Table $table): Table
     {
-        return $table->columns([
-            TextColumn::make('title')->limit(30)->sortable()->searchable(),
-            ImageColumn::make('image')->size(40),
-            TextColumn::make('author.name')->label('Author'),
-            TextColumn::make('published_at')
-                ->label('Dipublikasikan')
-                ->dateTime(),
-            TextColumn::make('created_at')
-                ->label('Dibuat')
-                ->dateTime(),
+        return $table
+            ->columns([
+                Tables\Columns\TextColumn::make('title')->limit(30)->sortable()->searchable(),
+                Tables\Columns\SpatieMediaLibraryImageColumn::make('image')
+                    ->collection('news')
+                    ->label('News Picture'),
+                Tables\Columns\TextColumn::make('user.name')
+                    ->label('Author')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('published_at')
+                    ->label('Dipublikasikan')
+                    ->dateTime(),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->label('Dibuat')
+                    ->dateTime()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                //
+            ])
+            ->actions([
+                Tables\Actions\EditAction::make(),
+            ])
+            ->bulkActions([
+                Tables\Actions\BulkActionGroup::make([
+                    Tables\Actions\DeleteBulkAction::make(),
+                ]),
+            ]);
+    }
 
-        ]);
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
     }
 
     public static function getPages(): array

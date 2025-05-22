@@ -8,4 +8,18 @@ class Vote extends Model
 {
     protected $guarded = ['id'];
 
+    public function candidate()
+    {
+        return $this->belongsTo(User::class, 'candidate_id');
+    }
+
+    public function voting()
+    {
+        return $this->belongsTo(Voting::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

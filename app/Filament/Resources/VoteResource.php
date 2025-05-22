@@ -2,10 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\AspirationResource\Pages;
-use App\Filament\Resources\AspirationResource\RelationManagers;
-use App\Models\Aspiration;
-use App\Models\User;
+use App\Filament\Resources\VoteResource\Pages;
+use App\Filament\Resources\VoteResource\RelationManagers;
+use App\Models\Vote;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -14,27 +13,25 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class AspirationResource extends Resource
+class VoteResource extends Resource
 {
-    protected static ?string $model = Aspiration::class;
+    protected static ?string $model = Vote::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left-right';
+    protected static ?string $navigationIcon = 'heroicon-o-document-check';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('user_id')
+                Forms\Components\TextInput::make('voting_id')
                     ->required()
-                    ->label('Author')
-                    ->options(User::all()->pluck('name', 'id'))
-                    ->searchable(),
-                Forms\Components\TextInput::make('subject')
+                    ->numeric(),
+                Forms\Components\TextInput::make('user_id')
                     ->required()
-                    ->maxLength(255),
-                Forms\Components\Textarea::make('message')
+                    ->numeric(),
+                Forms\Components\TextInput::make('candidate_id')
                     ->required()
-                    ->columnSpanFull(),
+                    ->numeric(),
             ]);
     }
 
@@ -42,14 +39,14 @@ class AspirationResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('user.name')
-                    ->label('Author')
-                    ->searchable()
+                Tables\Columns\TextColumn::make('voting.title')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('subject')
-                    ->label('Feedback')
-                    ->searchable()
-                    ->description(fn(Aspiration $record): string => $record->message),
+                Tables\Columns\TextColumn::make('user.name')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('candidate.name')
+                    ->numeric()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -82,9 +79,16 @@ class AspirationResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListAspirations::route('/'),
-            'create' => Pages\CreateAspiration::route('/create'),
-            'edit' => Pages\EditAspiration::route('/{record}/edit'),
+            'index' => Pages\ListVotes::route('/'),
+            'create' => Pages\CreateVote::route('/create'),
+            'edit' => Pages\EditVote::route('/{record}/edit'),
         ];
     }
+
+    public static function canCreate(): bool
+    {
+        return false;
+    }
 }
+
+

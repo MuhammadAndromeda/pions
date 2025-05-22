@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\EventResource\Pages;
 use App\Filament\Resources\EventResource\RelationManagers;
 use App\Models\Event;
+use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,12 +13,14 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 
 class EventResource extends Resource
 {
     protected static ?string $model = Event::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-calendar-days';
 
     public static function form(Form $form): Form
     {
@@ -25,6 +28,7 @@ class EventResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('title')
                     ->required()
+                    ->columnSpanFull()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
                     ->required()
@@ -34,13 +38,18 @@ class EventResource extends Resource
                     ->maxLength(255),
                 Forms\Components\DatePicker::make('date')
                     ->required(),
-                Forms\Components\TextInput::make('time')
+                Forms\Components\TimePicker::make('time')
                     ->required(),
-                Forms\Components\TextInput::make('poster')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('created_by')
+                Forms\Components\Select::make('created_by')
                     ->required()
-                    ->numeric(),
+                    ->label('Author')
+                    ->options(User::all()->pluck('name', 'id'))
+                    ->searchable(),
+                Forms\Components\SpatieMediaLibraryFileUpload::make('poster')
+                    ->collection('posters')
+                    ->directory('posters')
+                    ->disk('public')
+                    ->preserveFilenames()
             ]);
     }
 
@@ -56,11 +65,14 @@ class EventResource extends Resource
                     ->date()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('time'),
-                Tables\Columns\TextColumn::make('poster')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_by')
-                    ->numeric()
-                    ->sortable(),
+                Tables\Columns\SpatieMediaLibraryImageColumn::make('poster')
+                    ->collection('posters')
+                    ->label('Poster'),
+                Tables\Columns\TextColumn::make('creator.name')
+                    ->label('Author')
+                    ->sortable()
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

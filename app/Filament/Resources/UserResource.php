@@ -2,9 +2,8 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\AspirationResource\Pages;
-use App\Filament\Resources\AspirationResource\RelationManagers;
-use App\Models\Aspiration;
+use App\Filament\Resources\UserResource\Pages;
+use App\Filament\Resources\UserResource\RelationManagers;
 use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -14,27 +13,28 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class AspirationResource extends Resource
+class UserResource extends Resource
 {
-    protected static ?string $model = Aspiration::class;
+    protected static ?string $model = User::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left-right';
+    protected static ?string $navigationIcon = 'heroicon-o-user';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('user_id')
-                    ->required()
-                    ->label('Author')
-                    ->options(User::all()->pluck('name', 'id'))
-                    ->searchable(),
-                Forms\Components\TextInput::make('subject')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\Textarea::make('message')
-                    ->required()
-                    ->columnSpanFull(),
+                Forms\Components\TextInput::make('name')
+                    ->required(),
+                Forms\Components\TextInput::make('email')
+                    ->email()
+                    ->required(),
+                Forms\Components\TextInput::make('password')
+                    ->password()
+                    ->required(),
+                Forms\Components\Select::make('roles')
+                    ->relationship('roles', 'name')
+                    ->preload()
+                    ->required(),
             ]);
     }
 
@@ -42,14 +42,13 @@ class AspirationResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('user.name')
-                    ->label('Author')
-                    ->searchable()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('subject')
-                    ->label('Feedback')
-                    ->searchable()
-                    ->description(fn(Aspiration $record): string => $record->message),
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('email')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('roles.name')
+                    ->badge()
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -82,9 +81,14 @@ class AspirationResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListAspirations::route('/'),
-            'create' => Pages\CreateAspiration::route('/create'),
-            'edit' => Pages\EditAspiration::route('/{record}/edit'),
+            'index' => Pages\ListUsers::route('/'),
+            'create' => Pages\CreateUser::route('/create'),
+            'edit' => Pages\EditUser::route('/{record}/edit'),
         ];
     }
+
+    //     public static function canAccess(): bool
+//     {
+//         return auth()->user()?->hasAnyRole(['admin', 'OSIS']);
+//     }
 }

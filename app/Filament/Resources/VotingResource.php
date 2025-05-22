@@ -17,7 +17,7 @@ class VotingResource extends Resource
 {
     protected static ?string $model = Voting::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-megaphone';
 
     public static function form(Form $form): Form
     {
@@ -28,10 +28,10 @@ class VotingResource extends Resource
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
                     ->columnSpanFull(),
-                Forms\Components\Toggle::make('is_active')
-                    ->required(),
                 Forms\Components\DateTimePicker::make('start_at'),
                 Forms\Components\DateTimePicker::make('end_at'),
+                Forms\Components\Toggle::make('is_active')
+                    ->required(),
             ]);
     }
 
