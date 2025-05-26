@@ -6,13 +6,18 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    public function login()
+    public function loginView()
     {
         return view('auth.login');
     }
 
-    public function register()
+    public function registerView()
     {
         return view('auth.register');
+    }
+
+    public function signIn()
+    {
+        
     }
 }
