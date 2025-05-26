@@ -30,8 +30,9 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
+            ->brandLogo(asset('images/logo.svg'))
             ->brandName('PIONS Admin Panel')
-            ->favicon(asset('/public/images/logo-panel-admin.png'))
+            ->favicon(asset('images/logo.svg'))
             ->widgets([
                 VotingResults::class,
                 ParticipantSummary::class,
