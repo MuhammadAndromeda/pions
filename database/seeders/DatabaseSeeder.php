@@ -15,22 +15,23 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
-        Participant::create([
-            'user_id' => '1',
-            'event_id' => '2',
-        ]);
+        // Participant::create([
+        //     'user_id' => '1',
+        //     'event_id' => '2',
+        // ]);
 
         // User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
 
-        // $this->call(EventSeeder::class);
+        $this->call(UserSeeder::class);
 
-        // $this->call(UserSeeder::class);
+        $this->call([
+            EventSeeder::class,
+            RoleSeeder::class,
+            NewsSeeder::class,
+        ]);
 
-        // $this->call([
-        //     RoleSeeder::class,
-        // ]);
     }
 }

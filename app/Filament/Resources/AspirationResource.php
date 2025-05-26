@@ -20,6 +20,8 @@ class AspirationResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left-right';
 
+    protected static ?string $navigationGroup = 'PIONS';
+
     public static function form(Form $form): Form
     {
         return $form

@@ -5,6 +5,7 @@ namespace App\Models;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Validation\Rule;
 
 class Member extends Model implements HasMedia
 {
@@ -15,4 +16,13 @@ class Member extends Model implements HasMedia
     {
         return $this->belongsTo(User::class);
     }
+
+    public static function rules(): array
+    {
+        return [
+            'user_id' => ['required', Rule::unique('members', 'user_id')],
+            // other rules...
+        ];
+    }
+
 }

@@ -19,6 +19,9 @@ class VoteResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-document-check';
 
+    protected static ?string $navigationGroup = 'Votings';
+
+
     public static function form(Form $form): Form
     {
         return $form
@@ -86,6 +89,11 @@ class VoteResource extends Resource
     }
 
     public static function canCreate(): bool
+    {
+        return false;
+    }
+
+    public static function canEdit(\Illuminate\Database\Eloquent\Model $record): bool
     {
         return false;
     }

@@ -3,7 +3,7 @@
 namespace App\Filament\Resources\VoteResource\Pages;
 
 use App\Filament\Resources\VoteResource;
-use App\Filament\Widgets\VotingResultsWidget;
+use App\Filament\Widgets\VotingResults;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
@@ -21,7 +21,7 @@ class ListVotes extends ListRecords
     protected function getHeaderWidgets(): array
     {
         return [
-            VotingResultsWidget::class,
+            VotingResults::class,
         ];
     }
 }

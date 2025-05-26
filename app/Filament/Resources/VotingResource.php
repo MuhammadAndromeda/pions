@@ -19,6 +19,8 @@ class VotingResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-megaphone';
 
+    protected static ?string $navigationGroup = 'Votings';
+
     public static function form(Form $form): Form
     {
         return $form

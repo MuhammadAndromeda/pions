@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\Position;
 use App\Filament\Resources\MemberResource\Pages;
 use App\Filament\Resources\MemberResource\RelationManagers;
 use App\Models\Member;
@@ -22,6 +23,8 @@ class MemberResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
+    protected static ?string $navigationGroup = 'PIONS';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -29,11 +32,14 @@ class MemberResource extends Resource
                 Forms\Components\Select::make('user_id')
                     ->required()
                     ->label('User')
-                    ->options(User::all()->pluck('name', 'id'))
+                    ->options(function () {
+                        $usedUserIds = Member::pluck('user_id')->toArray();
+                        return User::whereNotIn('id', $usedUserIds)->pluck('name', 'id');
+                    })
                     ->searchable(),
                 Forms\Components\Select::make('position')
                     ->label('Position (Role)')
-                    ->options(fn() => Role::all()->pluck('name', 'name'))
+                    ->options(Position::options())
                     ->searchable()
                     ->required(),
                 Forms\Components\DatePicker::make('period')
@@ -55,9 +61,8 @@ class MemberResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('position')
                     ->badge()
-                    ->color(fn($state) => MemberResource::getRoleColorMap()[$state] ?? 'gray')
                     ->label('Role/Position')
-                    ->formatStateUsing(fn($state) => ucwords(str_replace('_', ' ', $state)))
+                    ->colors(Position::badgeColors())
                     ->sortable(),
                 Tables\Columns\TextColumn::make('period')
                     ->searchable(),
@@ -112,34 +117,34 @@ class MemberResource extends Resource
         }
     }
 
-    protected static function getRoleColorMap(): array
-    {
-        return [
-            // 5 Pilar PIONS
-            'President of Pions' => 'success',
-            'Vice President of Pions' => 'success',
-            'Vice Secretary of Pions' => 'success',
-            'Secretary of Pions' => 'success',
-            'Treasurer of Pions' => 'success',
+    // protected static function getRoleColorMap(): array
+    // {
+    //     return [
+    //         // 5 Pilar PIONS
+    //         'President of Pions' => 'success',
+    //         'Vice President of Pions' => 'success',
+    //         'Vice Secretary of Pions' => 'success',
+    //         'Secretary of Pions' => 'success',
+    //         'Treasurer of Pions' => 'success',
 
-            // Kepala Divisi
-            'President of Media Division' => 'primary',
-            'President of Education Division' => 'primary',
-            'President of Event Division' => 'primary',
-            'President of Ubudiyyah Division' => 'primary',
-            'President of Public Relation' => 'primary',
-            'President of Sports Division' => 'primary',
-            'President of Cleanliness Division' => 'primary',
+    //         // Kepala Divisi
+    //         'President of Media Division' => 'primary',
+    //         'President of Education Division' => 'primary',
+    //         'President of Event Division' => 'primary',
+    //         'President of Ubudiyyah Division' => 'primary',
+    //         'President of Public Relation' => 'primary',
+    //         'President of Sports Division' => 'primary',
+    //         'President of Cleanliness Division' => 'primary',
 
-            // Anggota Divisi
-            'Member of Ubudiyyah Division' => 'danger',
-            'Member of Public Relation' => 'danger',
-            'Member of Sports Division' => 'danger',
-            'Member of Cleanliness Division' => 'danger',
-            'Member of Media Division' => 'danger',
-            'Member of Education Division' => 'danger',
-            'Member of Event Division' => 'danger',
-        ];
-    }
+    //         // Anggota Divisi
+    //         'Member of Ubudiyyah Division' => 'danger',
+    //         'Member of Public Relation' => 'danger',
+    //         'Member of Sports Division' => 'danger',
+    //         'Member of Cleanliness Division' => 'danger',
+    //         'Member of Media Division' => 'danger',
+    //         'Member of Education Division' => 'danger',
+    //         'Member of Event Division' => 'danger',
+    //     ];
+    // }
 
 }

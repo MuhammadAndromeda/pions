@@ -3,7 +3,8 @@
 namespace App\Filament\Resources\ParticipantResource\Pages;
 
 use App\Filament\Resources\ParticipantResource;
-use App\Filament\Widgets\ParticipantSummaryWidget;
+use App\Filament\Widgets\ParticipantSummary;
+use Filament\Widgets\Widget;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
@@ -21,7 +22,7 @@ class ListParticipants extends ListRecords
     protected function getHeaderWidgets(): array
     {
         return [
-            ParticipantSummaryWidget::class,
+            ParticipantSummary::class,
         ];
     }
 }

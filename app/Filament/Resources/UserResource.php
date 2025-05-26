@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Hash;
 
 class UserResource extends Resource
 {
@@ -23,18 +24,26 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required(),
-                Forms\Components\TextInput::make('email')
-                    ->email()
-                    ->required(),
-                Forms\Components\TextInput::make('password')
-                    ->password()
-                    ->required(),
-                Forms\Components\Select::make('roles')
-                    ->relationship('roles', 'name')
-                    ->preload()
-                    ->required(),
+                Forms\Components\Group::make()
+                    ->schema([
+                        Forms\Components\TextInput::make('name')
+                            ->required(),
+                        Forms\Components\TextInput::make('email')
+                            ->email()
+                            ->required(),
+                    ]),
+                Forms\Components\Group::make()
+                    ->schema([
+                        Forms\Components\Select::make('roles')
+                            ->relationship('roles', 'name')
+                            ->preload()
+                            ->required(),
+                        Forms\Components\TextInput::make('password')
+                            ->password()
+                            ->dehydrateStateUsing(fn(string $state): string => Hash::make($state))
+                            ->dehydrated(fn(?string $state): bool => filled($state))
+                            ->required(fn(string $operation): bool => $operation === 'create'),
+                    ]),
             ]);
     }
 
@@ -48,6 +57,11 @@ class UserResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('roles.name')
                     ->badge()
+                    ->color(fn(string $state): string => match ($state) {
+                        'PIONS' => 'success',
+                        'super_admin' => 'danger',
+                        'Student' => 'info',
+                    })
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

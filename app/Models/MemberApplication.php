@@ -4,13 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Voting extends Model
+class MemberApplication extends Model
 {
+
     protected $guarded = ['id'];
 
-    public function voting()
+    public function user()
     {
-        return $this->belongsTo(Vote::class);
+        return $this->belongsTo(User::class);
     }
-
 }
