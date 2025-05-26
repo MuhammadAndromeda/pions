@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - PIONS | Pamijahan IDN Organization Nimbly Student</title>
-    <link href="../../src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    @vite('resources/css/app.css')
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -16,10 +18,10 @@
 <body>
     <section class="w-full h-screen bg-blue-800 relative flex flex-row-reverse justify-between items-center">
         <div class="w-full h-auto absolute top-0 flex justify-center items-center">
-            <img src="../assets/Ellipse.svg" class="w-150 h-auto z-0">
+            <img src="{{ asset('images/Ellipse.svg') }}" class="w-150 h-auto z-0">
         </div>
         <div class="w-1/2 h-screen px-15 py-10 bg-transparent flex flex-col justify-start items-end z-10">
-            <img src="../assets/logo_pions.svg" class="w-20 h-auto max-w-full mb-40">
+            <img src="{{ asset('images/logo-osis.svg') }}" class="w-20 h-auto max-w-full mb-40">
             <div class="w-full h-auto flex flex-col justify-center items-end">
                 <h1 class="text-7xl font-medium text-white text-right capitalize mb-10">Welcome <br>back to Pions</h1>
                 <p class="text-lg font-normal text-white text-right capitalize">sign in. stay active. stay inspired</p>
