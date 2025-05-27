@@ -7,6 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/login', [AuthController::class, 'loginView'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'signIn']);
 
