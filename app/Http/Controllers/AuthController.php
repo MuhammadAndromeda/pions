@@ -20,4 +20,9 @@ class AuthController extends Controller
     {
         
     }
+
+    public function signUp()
+    {
+
+    }
 }
