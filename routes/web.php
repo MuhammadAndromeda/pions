@@ -12,4 +12,10 @@ Route::get('/login', [AuthController::class, 'loginView'])->name('login')->middl
 Route::post('/login', [AuthController::class, 'signIn']);
 
 Route::get('/register', [AuthController::class, 'registerView'])->middleware('guest');
-Route::get('/register', [AuthController::class, 'signUp']);
+Route::post('/register', [AuthController::class, 'signUp'])->name('register');
+
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/voting', function(){
+    return view('voting');
+});
