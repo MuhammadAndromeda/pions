@@ -17,7 +17,3 @@ Route::get('/register', [AuthController::class, 'registerView'])->middleware('gu
 Route::post('/register', [AuthController::class, 'signUp'])->name('register');
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-
-Route::get('/voting', function(){
-    return view('voting');
-});
