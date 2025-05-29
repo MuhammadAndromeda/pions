@@ -1,7 +1,7 @@
 <footer class="w-full h-auto bg-white relative overflow-hidden flex flex-col justify-start items-center">
     <div class="w-full h-auto py-15 px-10 flex justify-between items-center">
         <div class="w-auto h-auto flex flex-col justify-center items-start">
-            <img src="assets/logo_pions_colored.svg" class="w-20 h-auto max-w-full mb-2">
+            <img src="{{ asset('images/logo_pions_colored.svg') }}" class="w-20 h-auto max-w-full mb-2">
             <h1 class="text-blue-800 text-4xl font-bold text-left capitalize mb-6">pamijahan idn organization <br>nimbly student</h1>
             <p class="text-blue-800 text-md font-medium text-left uppercase">pions, 2025</p>
         </div>
