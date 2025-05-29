@@ -222,18 +222,6 @@
     </section>
 
     <script>
-        const mobile = document.getElementById("mobile");
-
-        function responsif()
-        {
-            mobile.classList.remove('translate-x-full')
-        }
-
-        function web()
-        {
-            mobile.classList.add('translate-x-full')
-        }
-
         const container = document.getElementById("cardContainer");
         const scrollAmount = 372;
 

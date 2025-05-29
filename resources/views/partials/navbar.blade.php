@@ -30,3 +30,17 @@
         <a href="#" class="px-10 py-2 border-4 border-blue-600 rounded-full bg-blue-600 hover:bg-transparent text-md shadow-sm shadow-black/50 text-white font-medium capitalize transition-all">register</a>
     </div>
 </div>
+
+<script>
+    const mobile = document.getElementById("mobile");
+
+    function responsif()
+    {
+        mobile.classList.remove('translate-x-full')
+    }
+
+    function web()
+    {
+        mobile.classList.add('translate-x-full')
+    }
+</script>
