@@ -63,7 +63,7 @@
                         </div>
                         <div class="w-full h-auto px-4 mb-1 flex justify-between items-start">
                             <h1 class="text-blue-800 text-3xl capitalize font-black">Tubagus <br>valentino .d .a</h1>
-                            <a href="#" class="px-5 py-2 rounded-full text-white text-[10px] capitalize font-medium bg-pink-600">see more</a>
+                            <a href="{{ url('public_relation') }}" class="px-5 py-2 rounded-full text-white text-[10px] capitalize font-medium bg-pink-600">see more</a>
                         </div>
                         <p class="ml-4 text-blue-800 text-sm capitalize font-bold">leader of public relation pions</p>
                     </div>
