@@ -7,7 +7,7 @@
         <div class="w-full h-auto px-5 gap-5 flex flex-col-reverse md:flex-row justify-end md:justify-between items-center md:items-end z-10">
             <div class="w-full h-auto pl-0 md:pl-20 pb-8 md:pb-15 flex flex-col justify-center items-center md:items-start">
                 <h1 class="mb-3 md:mb-4 text-5xl md:text-8xl text-white text-center md:text-left font-black font-nohemi capitalize tracking-wide">grow <br>your skill <br>with pions</h1>
-                <p class="mb-5 md:mb-10 text-md md:text-2xl text-white text-center md:text-left font-medium">Let's grow together and<br>make cool things happend</p>
+                <p class="mb-5 md:mb-10 text-base md:text-2xl text-white text-center md:text-left font-medium">Let's grow together and<br>make cool things happend</p>
                 <div class="w-full h-auto gap-5 flex justify-center md:justify-start items-center">
                     <a href="#" class="px-8 md:px-10 py-3 border-4 border-emerald-500 rounded-full bg-emerald-500 text-sm md:text-lg text-white text-center md:text-left font-medium font-nohemi capitalize">join us</a>
                     <a href="#" class="px-8 md:px-10 py-3 border-4 border-purple-600 rounded-full bg-purple-600 text-sm md:text-lg text-white text-center md:text-left font-medium font-nohemi capitalize">explore division</a>
@@ -117,108 +117,108 @@
         </div>
     </section>
 
-    <section class="w-full h-screen py-10 px-5 bg-blue-900 gap-10 relative overflow-hidden flex flex-col md:flex-row justify-center items-center">
-        <div class="w-full h-auto flex justify-end items-center">
-            <img src="{{ asset('images/posterPions.png') }}" class="w-100 h-auto max-w-full">
+    <section class="w-full h-auto md:h-screen py-10 px-5 bg-blue-900 gap-10 relative overflow-hidden flex flex-col md:flex-row justify-center items-center">
+        <div class="w-full h-auto flex justify-center md:justify-end items-center">
+            <img src="{{ asset('images/posterPions.png') }}" class="w-60 md:w-100 h-auto max-w-full">
         </div>
         <div class="w-full h-auto flex flex-col justify-center items-center md:items-start">
-            <h1 class="text-white text-6xl text-center md:text-left font-nohemi capitalize">what is <br><span class="font-extrabold font-nohemi tracking-wider">pions</span>?</h1>
-            <p class="w-110 text-white text-xl text-justify font-medium mb-5">PIONS (Pamijahan IDN Organization Nimbly Student) is a student organization at SMK IDN Boarding School Bogor that helps students grow their skills, lead with confidence, and explore their passions through 4 main divisions.</p>
+            <h1 class="w-auto md:w-60 text-white text-4xl md:text-6xl text-center md:text-left font-nohemi capitalize">what is <span class="font-extrabold font-nohemi tracking-wider">pions</span>?</h1>
+            <p class="w-full md:w-110 text-white text-sm md:text-xl text-justify font-medium mb-5">PIONS (Pamijahan IDN Organization Nimbly Student) is a student organization at SMK IDN Boarding School Bogor that helps students grow their skills, lead with confidence, and explore their passions through 4 main divisions.</p>
 
-            <div class="w-full h-auto mb-6 gap-5 flex justify-start items-center">
-                <div class="w-25 h-25 px-3 bg-emerald-600 relative overflow-hidden flex flex-col justify-center items-center">
-                    <h2 class="w-full text-left text-white text-3xl font-bold font-nohemi capitalize">30+</h2>
-                    <p class="w-full text-left text-white text-sm font-medium font-nohemi capitalize leading-4">active member</p>
+            <div class="w-full h-auto mb-6 gap-5 flex justify-center md:justify-start items-center">
+                <div class="w-20 h-20 px-3 bg-emerald-600 relative overflow-hidden flex flex-col justify-center items-center">
+                    <h2 class="w-full text-left text-white text-xl md:text-3xl font-bold font-nohemi capitalize">30+</h2>
+                    <p class="w-full text-left text-white text-xs md:text-sm font-medium font-nohemi capitalize leading-4">active member</p>
                 </div>
-                <div class="w-25 h-25 px-3 bg-purple-700 relative overflow-hidden flex flex-col justify-center items-center">
-                    <h2 class="w-full text-left text-white text-3xl font-bold font-nohemi capitalize">6</h2>
-                    <p class="w-full text-left text-white text-sm font-medium font-nohemi capitalize leading-4">inspiring leaders division</p>
+                <div class="w-20 h-20 px-3 bg-purple-700 relative overflow-hidden flex flex-col justify-center items-center">
+                    <h2 class="w-full text-left text-white text-xl md:text-3xl font-bold font-nohemi capitalize">6</h2>
+                    <p class="w-full text-left text-white text-xs md:text-sm font-medium font-nohemi capitalize leading-4">inspiring leaders division</p>
                 </div>
-                <div class="w-25 h-25 px-3 bg-pink-600 relative overflow-hidden flex flex-col justify-center items-center">
-                    <h2 class="w-full text-left text-white text-3xl font-bold font-nohemi capitalize">5</h2>
-                    <p class="w-full text-left text-white text-sm font-medium font-nohemi capitalize leading-4">pions pillars</p>
+                <div class="w-20 h-20 px-3 bg-pink-600 relative overflow-hidden flex flex-col justify-center items-center">
+                    <h2 class="w-full text-left text-white text-xl md:text-3xl font-bold font-nohemi capitalize">5</h2>
+                    <p class="w-full text-left text-white text-xs md:text-sm font-medium font-nohemi capitalize leading-4">pions pillars</p>
                 </div>
             </div>
 
-            <div class="w-full h-auto gap-5 flex justify-start items-center">
-                <a href="#" class="px-8 py-2 border-4 border-emerald-600 rounded-full bg-emerald-600 text-sm text-white font-medium capitalize">learn more</a>
-                <a href="#" class="px-8 py-2 border-4 border-pink-600 rounded-full bg-pink-600 text-sm text-white font-medium capitalize">explore division</a>
+            <div class="w-full h-auto gap-5 flex justify-center md:justify-start items-center">
+                <a href="#" class="px-5 md:px-8 py-2 border-4 border-emerald-600 rounded-full bg-emerald-600 text-sm text-center md:text-left text-white font-medium capitalize">learn more</a>
+                <a href="#" class="px-5 md:px-8 py-2 border-4 border-pink-600 rounded-full bg-pink-600 text-sm text-center md:text-left text-white font-medium capitalize">explore division</a>
             </div>
         </div>
     </section>
 
-    <section class="w-full h-auto px-15 bg-blue-900 relative overflow-hidden flex flex-row-reverse justify-between items-center">
-        <h1 class="text-white text-5xl text-right font-bold font-nohemi capitalize">Welcome to pions <br>and here the 4 <br>Pillar <span class="font-medium">of Pions</span></h1>
-        <p class="text-white text-xl text-left font-medium capitalize">Explore PIONS' Divisions, <br>Uncover Your Hidden Talents, <br>and Grow Your Potential!</p>
+    <section class="w-full h-auto px-5 md:px-15 bg-blue-900 relative overflow-hidden flex flex-row-reverse justify-between items-center">
+        <h1 class="w-100 md:w-120 text-white text-xl md:text-5xl text-right font-bold font-nohemi capitalize">Welcome to pions and here the 4 Pillar <span class="font-medium">of Pions</span></h1>
+        <p class="w-70 text-white text-xs md:text-xl text-left font-medium capitalize">Explore PIONS' Divisions, Uncover Your Hidden Talents, and Grow Your Potential!</p>
     </section>
     
-    <section class="w-full h-auto px-20 py-6 bg-blue-900 gap-6 relative overflow-hidden grid grid-cols-2 justify-center items-center">
+    <section class="w-full h-auto px-5 md:px-15 py-10 bg-blue-900 gap-6 relative overflow-hidden flex md:grid flex-col md:grid-cols-2 justify-center items-center">
 
-        <div class="w-max h-auto px-5 py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
-            <img src="{{ asset('images/ketos.png') }}" class="w-60 h-auto max-w-full">
-            <div class="w-70 h-auto flex flex-col justify-center items-start">
-                <h1 class="text-blue-800 font-bold text-3xl text-left capitalize">muhammad fadlan <br>rabbani j.</h1>
-                <p class="text-blue-800 font-medium text-md text-left capitalize mb-5">President of pions</p>
-                <div class="w-auto h-auto gap-5 flex justify-start items-center">
-                    <a href="#" class="w-18 h-18 p-3 bg-emerald-600 flex justify-center items-center"><i class="fa-brands fa-instagram text-white text-4xl"></i></a>
-                    <a href="#" class="w-18 h-18 p-3 bg-purple-700 flex justify-center items-center"><i class="fa-brands fa-facebook text-white text-4xl"></i></a>
-                    <a href="#" class="w-18 h-18 p-3 bg-pink-600 flex justify-center items-center"><i class="fa-brands fa-linkedin text-white text-4xl"></i></a>
+        <div class="w-max h-auto px-3 md:px-5 py-5 md:py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
+            <img src="{{ asset('images/ketos.png') }}" class="w-30 md:w-60 h-auto max-w-full">
+            <div class="w-40 md:w-70 h-auto flex flex-col justify-center items-start">
+                <h1 class="text-blue-800 font-bold text-lg md:text-3xl text-left capitalize">muhammad fadlan rabbani j.</h1>
+                <p class="text-blue-800 font-medium text-xs md:text-base text-left capitalize mb-2 md:mb-5">President of pions</p>
+                <div class="w-auto h-auto gap-2 md:gap-5 flex justify-start items-center">
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-emerald-600 flex justify-center items-center"><i class="fa-brands fa-instagram text-white text-2xl md:text-4xl"></i></a>
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-purple-700 flex justify-center items-center"><i class="fa-brands fa-facebook text-white text-2xl md:text-4xl"></i></a>
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-pink-600 flex justify-center items-center"><i class="fa-brands fa-linkedin text-white text-2xl md:text-4xl"></i></a>
                 </div>
             </div>
         </div>
 
-        <div class="w-max h-auto px-5 py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
-            <img src="{{ asset('images/waketos.png') }}" class="w-60 h-auto max-w-full">
-            <div class="w-70 h-auto flex flex-col justify-center items-start">
-                <h1 class="text-blue-800 font-bold text-3xl text-left capitalize">azmi fauzan <br>akbar</h1>
-                <p class="text-blue-800 font-medium text-md text-left capitalize mb-5">vice president of pions</p>
-                <div class="w-auto h-auto gap-5 flex justify-start items-center">
-                    <a href="#" class="w-18 h-18 p-3 bg-emerald-600 flex justify-center items-center"><i class="fa-brands fa-instagram text-white text-4xl"></i></a>
-                    <a href="#" class="w-18 h-18 p-3 bg-purple-700 flex justify-center items-center"><i class="fa-brands fa-facebook text-white text-4xl"></i></a>
-                    <a href="#" class="w-18 h-18 p-3 bg-pink-600 flex justify-center items-center"><i class="fa-brands fa-linkedin text-white text-4xl"></i></a>
+        <div class="w-max h-auto px-3 md:px-5 py-5 md:py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
+            <img src="{{ asset('images/waketos.png') }}" class="w-30 md:w-60 h-auto max-w-full">
+            <div class="w-40 md:w-70 h-auto flex flex-col justify-center items-start">
+                <h1 class="text-blue-800 font-bold text-lg md:text-3xl text-left capitalize">azmi fauzan akbar</h1>
+                <p class="text-blue-800 font-medium text-xs md:text-base text-left capitalize mb-2 md:mb-5">vice president of pions</p>
+                <div class="w-auto h-auto gap-2 md:gap-5 flex justify-start items-center">
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-emerald-600 flex justify-center items-center"><i class="fa-brands fa-instagram text-white text-2xl md:text-4xl"></i></a>
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-purple-700 flex justify-center items-center"><i class="fa-brands fa-facebook text-white text-2xl md:text-4xl"></i></a>
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-pink-600 flex justify-center items-center"><i class="fa-brands fa-linkedin text-white text-2xl md:text-4xl"></i></a>
                 </div>
             </div>
         </div>
 
-        <div class="w-max h-auto px-5 py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
-            <img src="{{ asset('images/sekretaris.png') }}" class="w-60 h-auto max-w-full">
-            <div class="w-70 h-auto flex flex-col justify-center items-start">
-                <h1 class="text-blue-800 font-bold text-3xl text-left capitalize">masaid fairus <br>trimarsongko</h1>
-                <p class="text-blue-800 font-medium text-md text-left capitalize mb-5">secretary of pions</p>
-                <div class="w-auto h-auto gap-5 flex justify-start items-center">
-                    <a href="#" class="w-18 h-18 p-3 bg-emerald-600 flex justify-center items-center"><i class="fa-brands fa-instagram text-white text-4xl"></i></a>
-                    <a href="#" class="w-18 h-18 p-3 bg-purple-700 flex justify-center items-center"><i class="fa-brands fa-facebook text-white text-4xl"></i></a>
-                    <a href="#" class="w-18 h-18 p-3 bg-pink-600 flex justify-center items-center"><i class="fa-brands fa-linkedin text-white text-4xl"></i></a>
+        <div class="w-max h-auto px-3 md:px-5 py-5 md:py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
+            <img src="{{ asset('images/sekretaris.png') }}" class="w-30 md:w-60 h-auto max-w-full">
+            <div class="w-40 md:w-70 h-auto flex flex-col justify-center items-start">
+                <h1 class="text-blue-800 font-bold text-lg md:text-3xl text-left capitalize">masaid fairus trimarsongko</h1>
+                <p class="text-blue-800 font-medium text-xs md:text-base text-left capitalize mb-2 md:mb-5">secretary of pions</p>
+                <div class="w-auto h-auto gap-2 md:gap-5 flex justify-start items-center">
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-emerald-600 flex justify-center items-center"><i class="fa-brands fa-instagram text-white text-2xl md:text-4xl"></i></a>
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-purple-700 flex justify-center items-center"><i class="fa-brands fa-facebook text-white text-2xl md:text-4xl"></i></a>
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-pink-600 flex justify-center items-center"><i class="fa-brands fa-linkedin text-white text-2xl md:text-4xl"></i></a>
                 </div>
             </div>
         </div>
 
-        <div class="w-max h-auto px-5 py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
-            <img src="{{ asset('images/bendaharam.png') }}" class="w-60 h-auto max-w-full">
-            <div class="w-70 h-auto flex flex-col justify-center items-start">
-                <h1 class="text-blue-800 font-bold text-3xl text-left capitalize">akbar rizki <br>pratama</h1>
-                <p class="text-blue-800 font-medium text-md text-left capitalize mb-5">treasurer of pions</p>
-                <div class="w-auto h-auto gap-5 flex justify-start items-center">
-                    <a href="#" class="w-18 h-18 p-3 bg-emerald-600 flex justify-center items-center"><i class="fa-brands fa-instagram text-white text-4xl"></i></a>
-                    <a href="#" class="w-18 h-18 p-3 bg-purple-700 flex justify-center items-center"><i class="fa-brands fa-facebook text-white text-4xl"></i></a>
-                    <a href="#" class="w-18 h-18 p-3 bg-pink-600 flex justify-center items-center"><i class="fa-brands fa-linkedin text-white text-4xl"></i></a>
+        <div class="w-max h-auto px-3 md:px-5 py-5 md:py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
+            <img src="{{ asset('images/bendaharam.png') }}" class="w-30 md:w-60 h-auto max-w-full">
+            <div class="w-40 md:w-70 h-auto flex flex-col justify-center items-start">
+                <h1 class="text-blue-800 font-bold text-lg md:text-3xl text-left capitalize">akbar rizki pratama</h1>
+                <p class="text-blue-800 font-medium text-xs md:text-base text-left capitalize mb-2 md:mb-5">treasurer of pions</p>
+                <div class="w-auto h-auto gap-2 md:gap-5 flex justify-start items-center">
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-emerald-600 flex justify-center items-center"><i class="fa-brands fa-instagram text-white text-2xl md:text-4xl"></i></a>
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-purple-700 flex justify-center items-center"><i class="fa-brands fa-facebook text-white text-2xl md:text-4xl"></i></a>
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-pink-600 flex justify-center items-center"><i class="fa-brands fa-linkedin text-white text-2xl md:text-4xl"></i></a>
                 </div>
             </div>
         </div>
 
-        <div class="w-max h-auto px-5 py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
-            <img src="{{ asset('images/wasek.png') }}" class="w-60 h-auto max-w-full">
-            <div class="w-70 h-auto flex flex-col justify-center items-start">
-                <h1 class="text-blue-800 font-bold text-3xl text-left capitalize">milan parade <br>siahaan</h1>
-                <p class="text-blue-800 font-medium text-md text-left capitalize mb-5">vice secretary of pions</p>
-                <div class="w-auto h-auto gap-5 flex justify-start items-center">
-                    <a href="#" class="w-18 h-18 p-3 bg-emerald-600 flex justify-center items-center"><i class="fa-brands fa-instagram text-white text-4xl"></i></a>
-                    <a href="#" class="w-18 h-18 p-3 bg-purple-700 flex justify-center items-center"><i class="fa-brands fa-facebook text-white text-4xl"></i></a>
-                    <a href="#" class="w-18 h-18 p-3 bg-pink-600 flex justify-center items-center"><i class="fa-brands fa-linkedin text-white text-4xl"></i></a>
+        <div class="w-max h-auto px-3 md:px-5 py-5 md:py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
+            <img src="{{ asset('images/wasek.png') }}" class="w-30 md:w-60 h-auto max-w-full">
+            <div class="w-40 md:w-70 h-auto flex flex-col justify-center items-start">
+                <h1 class="text-blue-800 font-bold text-lg md:text-3xl text-left capitalize">milan parade siahaan</h1>
+                <p class="text-blue-800 font-medium text-xs md:text-base text-left capitalize mb-2 md:mb-5">vice secretary of pions</p>
+                <div class="w-auto h-auto gap-2 md:gap-5 flex justify-start items-center">
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-emerald-600 flex justify-center items-center"><i class="fa-brands fa-instagram text-white text-2xl md:text-4xl"></i></a>
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-purple-700 flex justify-center items-center"><i class="fa-brands fa-facebook text-white text-2xl md:text-4xl"></i></a>
+                    <a href="#" class="w-10 md:w-18 h-10 md:h-18 p-3 bg-pink-600 flex justify-center items-center"><i class="fa-brands fa-linkedin text-white text-2xl md:text-4xl"></i></a>
                 </div>
             </div>
         </div>
-                
+                    
     </section>
 
     <script>

@@ -11,7 +11,7 @@
         <section class="w-full h-auto px-5 md:px-15 mb-15 gap-6 relative overflow-hidden flex md:grid flex-col md:grid-cols-2 justify-center items-center">
 
             <div class="w-max h-auto px-3 md:px-5 py-5 md:py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
-                <img src="assets/ketos.png" class="w-30 md:w-60 h-auto max-w-full">
+                <img src="{{ asset('images/ketos.png') }}" class="w-30 md:w-60 h-auto max-w-full">
                 <div class="w-auto md:w-70 h-auto flex flex-col justify-center items-start">
                     <h1 class="text-blue-800 font-bold text-lg md:text-3xl text-left capitalize">muhammad fadlan <br>rabbani j.</h1>
                     <p class="text-blue-800 font-medium text-xs md:text-base text-left capitalize mb-2 md:mb-5">President of pions</p>
@@ -24,7 +24,7 @@
             </div>
 
             <div class="w-max h-auto px-3 md:px-5 py-5 md:py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
-                <img src="assets/waketos.png" class="w-30 md:w-60 h-auto max-w-full">
+                <img src="{{ asset('images/waketos.png') }}" class="w-30 md:w-60 h-auto max-w-full">
                 <div class="w-auto md:w-70 h-auto flex flex-col justify-center items-start">
                     <h1 class="text-blue-800 font-bold text-lg md:text-3xl text-left capitalize">azmi fauzan <br>akbar</h1>
                     <p class="text-blue-800 font-medium text-xs md:text-base text-left capitalize mb-2 md:mb-5">vice president of pions</p>
@@ -37,7 +37,7 @@
             </div>
 
             <div class="w-max h-auto px-3 md:px-5 py-5 md:py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
-                <img src="assets/sekretaris.png" class="w-30 md:w-60 h-auto max-w-full">
+                <img src="{{ asset('images/sekretaris.png') }}" class="w-30 md:w-60 h-auto max-w-full">
                 <div class="w-auto md:w-70 h-auto flex flex-col justify-center items-start">
                     <h1 class="text-blue-800 font-bold text-lg md:text-3xl text-left capitalize">masaid fairus <br>trimarsongko</h1>
                     <p class="text-blue-800 font-medium text-xs md:text-base text-left capitalize mb-2 md:mb-5">secretary of pions</p>
@@ -50,7 +50,7 @@
             </div>
 
             <div class="w-max h-auto px-3 md:px-5 py-5 md:py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
-                <img src="assets/bendaharam.png" class="w-30 md:w-60 h-auto max-w-full">
+                <img src="{{ asset('images/bendaharam.png') }}" class="w-30 md:w-60 h-auto max-w-full">
                 <div class="w-auto md:w-70 h-auto flex flex-col justify-center items-start">
                     <h1 class="text-blue-800 font-bold text-lg md:text-3xl text-left capitalize">akbar rizki <br>pratama</h1>
                     <p class="text-blue-800 font-medium text-xs md:text-base text-left capitalize mb-2 md:mb-5">treasurer of pions</p>
@@ -63,7 +63,7 @@
             </div>
 
             <div class="w-max h-auto px-3 md:px-5 py-5 md:py-10 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
-                <img src="assets/wasek.png" class="w-30 md:w-60 h-auto max-w-full">
+                <img src="{{ asset('images/wasek.png') }}" class="w-30 md:w-60 h-auto max-w-full">
                 <div class="w-auto md:w-70 h-auto flex flex-col justify-center items-start">
                     <h1 class="text-blue-800 font-bold text-lg md:text-3xl text-left capitalize">milan parade <br>siahaan</h1>
                     <p class="text-blue-800 font-medium text-xs md:text-base text-left capitalize mb-2 md:mb-5">vice secretary of pions</p>
@@ -89,7 +89,7 @@
 
                     <div class="w-90 min-w-90 max-w-90 h-auto pb-10 border-4 border-black bg-white rounded-3xl relative overflow-hidden flex flex-col justify-center items-start">
                         <div class="w-full h-auto bg-blue-600 pt-6 mb-5 flex justify-center items-end">
-                            <img src="assets/orang-rendem.png" alt="" class="w-60 h-auto max-w-full">
+                            <img src="{{ asset('images/orang-rendem.png') }}" alt="" class="w-60 h-auto max-w-full">
                         </div>
                         <div class="w-full h-auto px-4 mb-1 flex justify-between items-start">
                             <h1 class="text-blue-800 text-3xl capitalize font-black">Arjuna Lakeisha <br>attawan SDJ</h1>
@@ -100,7 +100,7 @@
 
                     <div class="w-90 min-w-90 max-w-90 h-auto pb-10 border-4 border-black bg-white rounded-3xl relative overflow-hidden flex flex-col justify-center items-start">
                         <div class="w-full h-auto bg-purple-700 pt-6 mb-5 flex justify-center items-end">
-                            <img src="assets/orang-rendem.png" alt="" class="w-60 h-auto max-w-full">
+                            <img src="{{ asset('images/orang-rendem.png') }}" alt="" class="w-60 h-auto max-w-full">
                         </div>
                         <div class="w-full h-auto px-4 mb-1 flex justify-between items-start">
                             <h1 class="text-blue-800 text-3xl capitalize font-black">yoga yoshio<br> suparman</h1>
@@ -111,7 +111,7 @@
 
                     <div class="w-90 min-w-90 max-w-90 h-auto pb-10 border-4 border-black bg-white rounded-3xl relative overflow-hidden flex flex-col justify-center items-start">
                         <div class="w-full h-auto bg-pink-600 pt-6 mb-5 flex justify-center items-end">
-                            <img src="assets/orang-rendem.png" alt="" class="w-60 h-auto max-w-full">
+                            <img src="{{ asset('images/orang-rendem.png') }}" alt="" class="w-60 h-auto max-w-full">
                         </div>
                         <div class="w-full h-auto px-4 mb-1 flex justify-between items-start">
                             <h1 class="text-blue-800 text-3xl capitalize font-black">Tubagus <br>valentino .d .a</h1>
@@ -122,7 +122,7 @@
 
                     <div class="w-90 min-w-90 max-w-90 h-auto pb-10 border-4 border-black bg-white rounded-3xl relative overflow-hidden flex flex-col justify-center items-start">
                         <div class="w-full h-auto bg-red-900 pt-6 mb-5 flex justify-center items-end">
-                            <img src="assets/orang-rendem.png" alt="" class="w-60 h-auto max-w-full">
+                            <img src="{{ asset('images/orang-rendem.png') }}" alt="" class="w-60 h-auto max-w-full">
                         </div>
                         <div class="w-full h-auto px-4 mb-1 flex justify-between items-start">
                             <h1 class="text-blue-800 text-3xl capitalize font-black">ibnu alif <br>muhadzdzib</h1>
@@ -133,7 +133,7 @@
 
                     <div class="w-90 min-w-90 max-w-90 h-auto pb-10 border-4 border-black bg-white rounded-3xl relative overflow-hidden flex flex-col justify-center items-start">
                         <div class="w-full h-auto bg-yellow-400 pt-6 mb-5 flex justify-center items-end">
-                            <img src="assets/orang-rendem.png" alt="" class="w-60 h-auto max-w-full">
+                            <img src="{{ asset('images/orang-rendem.png') }}" alt="" class="w-60 h-auto max-w-full">
                         </div>
                         <div class="w-full h-auto px-4 mb-1 flex justify-between items-start">
                             <h1 class="text-blue-800 text-3xl capitalize font-black">r.m. fadhel<br> suradipraja</h1>
@@ -144,7 +144,7 @@
 
                     <div class="w-90 min-w-90 max-w-90 h-auto pb-10 border-4 border-black bg-white rounded-3xl relative overflow-hidden flex flex-col justify-center items-start">
                         <div class="w-full h-auto bg-emerald-600 pt-6 mb-5 flex justify-center items-end">
-                            <img src="assets/orang-rendem.png" alt="" class="w-60 h-auto max-w-full">
+                            <img src="{{ asset('images/orang-rendem.png') }}" alt="" class="w-60 h-auto max-w-full">
                         </div>
                         <div class="w-full h-auto px-4 mb-1 flex justify-between items-start">
                             <h1 class="text-blue-800 text-3xl capitalize font-black">alvin zaidan <br>faisal putra</h1>
@@ -155,7 +155,7 @@
 
                     <div class="w-90 min-w-90 max-w-90 h-auto pb-10 border-4 border-black bg-white rounded-3xl relative overflow-hidden flex flex-col justify-center items-start">
                         <div class="w-full h-auto bg-orange-600 pt-6 mb-5 flex justify-center items-end">
-                            <img src="assets/orang-rendem.png" alt="" class="w-60 h-auto max-w-full">
+                            <img src="{{ asset('images/orang-rendem.png') }}" alt="" class="w-60 h-auto max-w-full">
                         </div>
                         <div class="w-full h-auto px-4 mb-1 flex justify-between items-start">
                             <h1 class="text-blue-800 text-3xl capitalize font-black">rafie zubair <br>djohar</h1>
