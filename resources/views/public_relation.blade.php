@@ -4,13 +4,13 @@
     <main class="w-full h-auto px-5 py-15 relative overflow-hidden flex flex-col justify-center items-center">
         <header class="w-full h-auto gap-10 flex flex-col md:flex-row justify-center items-center">
             <div class="min-w-90 max-w-90 h-auto p-3 border-4 border-black bg-white rounded-3xl relative overflow-hidden flex flex-col justify-center items-center">
-                <img src="assets/imagev.png" alt="" class="w-80 h-auto max-w-full mb-5">
+                <img src="{{ asset('/imagev.png') }}" alt="" class="w-80 h-auto max-w-full mb-5">
                 <div class="w-full h-auto px-4 mb-5 flex justify-between items-center">
                     <div class="w-full h-auto flex flex-col justify-center items-start">
                         <h1 class="text-blue-800 text-2xl capitalize font-black mb-3">leader of public relation pions</h1>
                         <p class="text-blue-800 text-sm capitalize font-bold">SMK IDN boarding school bogor</p>
                     </div>
-                    <img src="assets/logo_pions_colored.svg" alt="" class="w-13 h-auto max-w-full">
+                    <img src="{{ asset('/logo_pions_colored.svg') }}" alt="" class="w-13 h-auto max-w-full">
                 </div>
             </div>
 
@@ -35,7 +35,7 @@
         <section class="w-full h-auto px-5 md:px-15 bg-blue-900 gap-6 relative overflow-hidden flex md:grid flex-col md:grid-cols-2 justify-center items-center">
 
             <div class="w-max h-auto px-3 md:px-5 py-5 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
-                <img src="assets/imagea.png" class="w-30 md:w-60 h-auto max-w-full">
+                <img src="{{ asset('/imagea.png') }}" class="w-30 md:w-60 h-auto max-w-full">
                 <div class="w-40 md:w-70 h-auto flex flex-col justify-center items-start">
                     <h1 class="text-blue-800 font-bold text-lg md:text-3xl text-left capitalize mb-1">faqih rafadinata idris</h1>
                     <p class="text-blue-800 font-bold text-xs md:text-base text-left capitalize mb-2 md:mb-5">Member of Public Relation Pions</p>
@@ -48,7 +48,7 @@
             </div>
 
             <div class="w-max h-auto px-3 md:px-5 py-5 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
-                <img src="assets/imagec.png" class="w-30 md:w-60 h-auto max-w-full">
+                <img src="{{ asset('/imagec.png') }}" class="w-30 md:w-60 h-auto max-w-full">
                 <div class="w-40 md:w-70 h-auto flex flex-col justify-center items-start">
                     <h1 class="text-blue-800 font-bold text-lg md:text-3xl text-left capitalize mb-1">chaerul alwi gibran</h1>
                     <p class="text-blue-800 font-bold text-xs md:text-base text-left capitalize mb-2 md:mb-5">Member of Public Relation Pions</p>
@@ -61,7 +61,7 @@
             </div>
 
             <div class="w-max h-auto px-3 md:px-5 py-5 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
-                <img src="assets/imagep.png" class="w-30 md:w-60 h-auto max-w-full">
+                <img src="{{ asset('/imagep.png') }}" class="w-30 md:w-60 h-auto max-w-full">
                 <div class="w-40 md:w-70 h-auto flex flex-col justify-center items-start">
                     <h1 class="text-blue-800 font-bold text-lg md:text-3xl text-left capitalize mb-1">prabu damar jati</h1>
                     <p class="text-blue-800 font-bold text-xs md:text-base text-left capitalize mb-2 md:mb-5">Member of Public Relation Pions</p>
@@ -74,7 +74,7 @@
             </div>
 
             <div class="w-max h-auto px-3 md:px-5 py-5 bg-white border-2 border-black rounded-xl gap-5 flex justify-center items-center">
-                <img src="assets/imagey.png" class="w-30 md:w-60 h-auto max-w-full">
+                <img src="{{ asset('/imagey.png') }}" class="w-30 md:w-60 h-auto max-w-full">
                 <div class="w-40 md:w-70 h-auto flex flex-col justify-center items-start">
                     <h1 class="text-blue-800 font-bold text-lg md:text-3xl text-left capitalize mb-1">mohammad yazid</h1>
                     <p class="text-blue-800 font-bold text-xs md:text-base text-left capitalize mb-2 md:mb-5">Member of Public Relation Pions</p>
