@@ -2,7 +2,7 @@
     <div class="w-full h-auto py-15 px-5 md:px-10 flex flex-col md:flex-row justify-between items-center">
         <div class="w-auto h-auto flex flex-col justify-center items-center md:items-start mb-10 md:mb-0">
             <img src="{{ asset('images/logo_pions_colored.svg') }}" class="w-10 h-auto max-w-full mb-2">
-            <h1 class="text-blue-800 text-2xl md:text-4xl font-bold text-center md:text-left capitalize mb-3 md:mb-6">pamijahan IDN organization nimbly student</h1>
+            <h1 class="w-auto md:w-140 text-blue-800 text-2xl md:text-4xl font-bold text-center md:text-left capitalize mb-3 md:mb-6">pamijahan IDN organization nimbly student</h1>
             <p class="text-blue-800 text-base font-medium text-left uppercase">pions, 2025</p>
         </div>
         <div class="w-auto h-auto gap-10 md:gap-15 grid md:flex grid-cols-2 md:grid-cols-1 md:flex-row justify-center md:justify-end items-center">
@@ -29,9 +29,9 @@
 
             <div class="w-auto h-auto gap-5 flex flex-col justify-center items-start">
                 <a href="#" class="text-blue-800 text-base text-left font-bold decoration-0 capitalize">social media</a>
-                <a href="#" class="text-blue-800 text-base text-left font-bold decoration-0 capitalize"><i class="fa-brands fa-instagram mr-1"></i>instagram</a>
-                <a href="#" class="text-blue-800 text-base text-left font-bold decoration-0 capitalize"><i class="fa-brands fa-linkedin mr-1"></i>linkedIn</a>
-                <a href="#" class="text-blue-800 text-base text-left font-bold decoration-0 capitalize"><i class="fa-brands fa-github mr-1"></i>github</a>
+                <a href="#" class="text-blue-800 text-base text-left font-bold decoration-0 capitalize flex justify-center items-center"><i class="fa-brands fa-instagram mr-1"></i>instagram</a>
+                <a href="#" class="text-blue-800 text-base text-left font-bold decoration-0 capitalize flex justify-center items-center"><i class="fa-brands fa-linkedin mr-1"></i>linkedIn</a>
+                <a href="#" class="text-blue-800 text-base text-left font-bold decoration-0 capitalize flex justify-center items-center"><i class="fa-brands fa-github mr-1"></i>github</a>
             </div>
         </div>
     </div>
