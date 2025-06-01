@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
 
         $this->call([
+            PionsPositionSeeder::class,
             EventSeeder::class,
             RoleSeeder::class,
             NewsSeeder::class,

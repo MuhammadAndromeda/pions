@@ -19,22 +19,22 @@ class UserSeeder extends Seeder
             'password' => bcrypt('12345678'),
         ]);
 
-        User::create([
-            'name' => 'Tubagus Valentino Dwi Amarta',
-            'email' => 'tubagusvalentino@pions.id',
-            'password' => bcrypt('12345678'),
-        ]);
+        // User::create([
+        //     'name' => 'Tubagus Valentino Dwi Amarta',
+        //     'email' => 'tubagusvalentino@pions.id',
+        //     'password' => bcrypt('12345678'),
+        // ]);
 
-        User::create([
-            'name' => 'Muhammad Fadlan Rabani Juhana',
-            'email' => 'muhammadfadlan@pions.id',
-            'password' => bcrypt('12345678'),
-        ]);
+        // User::create([
+        //     'name' => 'Muhammad Fadlan Rabani Juhana',
+        //     'email' => 'muhammadfadlan@pions.id',
+        //     'password' => bcrypt('12345678'),
+        // ]);
 
-        User::create([
-            'name' => 'Akbar Rizki Pratama',
-            'email' => 'akbarrizki@pions.id',
-            'password' => bcrypt('12345678'),
-        ]);
+        // User::create([
+        //     'name' => 'Akbar Rizki Pratama',
+        //     'email' => 'akbarrizki@pions.id',
+        //     'password' => bcrypt('12345678'),
+        // ]);
     }
 }

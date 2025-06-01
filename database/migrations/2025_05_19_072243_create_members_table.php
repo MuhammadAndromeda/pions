@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('position');
-            $table->string('period');
+            // $table->string('position');
+            // $table->string('period');
             $table->string('photo')->nullable();
             $table->timestamps();
         });
