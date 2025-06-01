@@ -1,15 +1,16 @@
 <?php
 
+use App\Http\Controllers\ApplyController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DivisionController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/public_relation', function () {
-    return view('public_relation');
-});
+Route::get('/divisions/{slug}', [DivisionController::class, 'show'])->name('department');
+
+Route::get('/apply', [ApplyController::class, 'index'])->name('apply');
 
 Route::get('/register', function () {
     return view('auth/register');
@@ -20,4 +21,4 @@ Route::post('/login', [AuthController::class, 'signIn']);
 Route::get('/register', [AuthController::class, 'registerView'])->middleware('guest');
 Route::post('/register', [AuthController::class, 'signUp'])->name('register');
 
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');

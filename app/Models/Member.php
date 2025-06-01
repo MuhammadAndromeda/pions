@@ -24,5 +24,11 @@ class Member extends Model implements HasMedia
             // other rules...
         ];
     }
-
+    /**
+     * Get the positions for the member.
+     */
+    public function pionsPositions()
+    {
+        return $this->hasMany(PionsPosition::class, 'member_id');
+    }
 }
