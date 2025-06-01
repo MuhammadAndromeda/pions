@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApplyController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\HomeController;
@@ -9,7 +10,7 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/divisions/{slug}', [DivisionController::class, 'show'])->name('department');
 
-Route::get('/divisions/{slug}', [DivisionController::class, 'show'])->name('department');
+Route::get('/apply', [ApplyController::class, 'index'])->name('apply');
 
 Route::get('/register', function () {
     return view('auth/register');
