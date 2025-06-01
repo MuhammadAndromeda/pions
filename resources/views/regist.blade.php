@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
     <section class="w-full h-auto py-20 bg-blue-900 flex flex-col justify-center items-center">
-        <header class="w-full px-8 md:px-15 mb-18 flex justify-between items-center">
+        <header class="w-full px-8 md:px-15 my-18 flex justify-between items-center">
             <h1 class="w-120 text-4xl md:text-6xl text-white font-black font-nohemi">Being Appart of us in <span class="font-normal font-nohemi">Pions</span></h1>
             <p class="w-60 text-xs md:text-base text-white font-normal">Discover your division that you like it and grown your ability</p>
         </header>
