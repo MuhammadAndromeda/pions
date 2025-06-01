@@ -1,14 +1,15 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/public_relation', function () {
-    return view('public_relation');
-});
+Route::get('/divisions/{slug}', [DivisionController::class, 'show'])->name('department');
+
+Route::get('/divisions/{slug}', [DivisionController::class, 'show'])->name('department');
 
 Route::get('/register', function () {
     return view('auth/register');
