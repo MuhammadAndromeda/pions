@@ -6,7 +6,7 @@ use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/divisions/{slug}', [DivisionController::class, 'show'])->name('department');
 
