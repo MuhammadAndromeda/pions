@@ -8,6 +8,7 @@ class ApplyController extends Controller
 {
     public function index()
     {
-        
+        $title = 'Apply';
+        return view('voting',compact('title'));
     }
 }
