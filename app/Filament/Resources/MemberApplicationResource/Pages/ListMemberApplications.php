@@ -4,8 +4,10 @@ namespace App\Filament\Resources\MemberApplicationResource\Pages;
 
 use App\Enums\Position;
 use App\Filament\Resources\MemberApplicationResource;
-use App\Models\Member;
+use App\Models\Member; // Pastikan ini di-import
+use App\Models\User;   // Pastikan ini juga di-import
 use Filament\Actions;
+use App\Models\PionsPosition;
 use Filament\Resources\Pages\ListRecords;
 use Filament\Tables;
 use Spatie\Permission\Models\Role;
@@ -46,9 +48,20 @@ class ListMemberApplications extends ListRecords implements Tables\Contracts\Has
                         !Member::where('user_id', $record->user_id)->exists()
                     )
                     ->action(function ($record) {
-                        // Add to members table
-                        Member::create([
+                        $user = $record->user;
+                        $userName = $user ? $user->name : 'Unknown';
+                        $userPhotoPath = $record->photo_path; // Asumsi foto aplikasi bisa jadi foto profil member
+            
+                        // 1. Buat entri di tabel 'members'
+                        $member = Member::create([
                             'user_id' => $record->user_id,
+                            'name' => $userName,
+                            'photo' => $userPhotoPath, // Jika Anda ingin menggunakan foto dari aplikasi
+                        ]);
+
+                        // 2. Buat entri di tabel 'pions_positions' dan tautkan ke member yang baru dibuat
+                        PionsPosition::create([
+                            'member_id' => $member->id, // Tautkan ke member yang baru dibuat
                             'position' => $record->preferred_position,
                             'period' => now()->format('Y'),
                         ]);
@@ -58,6 +71,7 @@ class ListMemberApplications extends ListRecords implements Tables\Contracts\Has
                             $record->user->syncRoles('PIONS');
                         }
 
+                        // Update status aplikasi
                         $record->update(['status' => 'accepted']);
                     })
                     ->requiresConfirmation(),
