@@ -16,13 +16,10 @@ Route::get('/divisions/{slug}', [DivisionController::class, 'show'])->name('depa
 Route::get('/apply', [ApplyController::class, 'index'])->name('apply');
 Route::post('/apply', [ApplyController::class, 'store'])->name('apply.store');
 
-Route::get('/register', function () {
-    return view('auth/register');
-});
-Route::get('/login', [AuthController::class, 'loginView'])->name('login')->middleware('guest');
+Route::get('/login', [AuthController::class, 'loginView'])->name('login');
 Route::post('/login', [AuthController::class, 'signIn']);
 
-Route::get('/register', [AuthController::class, 'registerView'])->middleware('guest');
-Route::post('/register', [AuthController::class, 'signUp'])->name('register');
+Route::get('/register', [AuthController::class, 'registerView'])->name('register');
+Route::post('/register', [AuthController::class, 'signUp']);
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');

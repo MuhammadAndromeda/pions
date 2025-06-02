@@ -107,22 +107,6 @@
                 </div>
             @endif
         </section>
-
-        {{-- Script untuk scroll tidak diperlukan di halaman ini jika tidak ada carousel --}}
-        {{--
-        <script>
-            const container = document.getElementById("cardContainer");
-            const scrollAmount = 372; // Pastikan ini sesuai dengan lebar card + gap
-
-            const kanan = document.getElementById("kanan").onclick = () => {
-                container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-            };
-
-            const kiri = document.getElementById("kiri").onclick = () => {
-                container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-            };
-        </script> --}}
-
     </body>
 
 @endsection
