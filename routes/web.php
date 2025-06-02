@@ -11,6 +11,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/divisions/{slug}', [DivisionController::class, 'show'])->name('department');
 
 Route::get('/apply', [ApplyController::class, 'index'])->name('apply');
+Route::post('/apply', [ApplyController::class, 'store'])->name('apply.store');
 
 Route::get('/register', function () {
     return view('auth/register');

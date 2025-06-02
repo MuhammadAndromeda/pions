@@ -5,7 +5,7 @@
     <div
         class="w-auto h-auto mr-20 px-10 py-1 bg-white shadow-sm shadow-black/50 rounded-full gap-5 flex justify-center items-center invisible lg:visible">
         <a href="{{ route('home') }}" class="px-6 py-2 rounded-md text-md text-black font-normal capitalize">home</a>
-        <a href="#" class="px-6 py-2 rounded-md text-md text-black font-normal capitalize">apply</a>
+        <a href="{{ route('apply') }}" class="px-6 py-2 rounded-md text-md text-black font-normal capitalize">apply</a>
 
         {{-- DROPdown About Us (Desktop) --}}
         <div class="relative" x-data="{ open: false }" @click.outside="open = false">
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="px-6 py-2 rounded-md text-md text-black font-normal capitalize">contact us</a>
+        <a href="#" class="px-6 py-2 rounded-md text-md text-black font-normal capitalize">Feedback</a>
     </div>
     <div class="w-auto h-auto gap-5 flex justify-center items-center invisible lg:visible">
         @auth
@@ -71,7 +71,7 @@
         <a href="{{ route('home') }}"
             class="text-lg text-black w-full h-auto px-3 py-2 bg-white font-medium decoration-0 rounded-md capitalize">Home</a>
         
-        <a href="#"
+        <a href="{{ route('apply') }}"
             class="text-lg text-black w-full h-auto px-3 py-2 bg-white font-medium decoration-0 rounded-md capitalize">Apply</a>
 
         {{-- DROPDOWN About Us (Mobile) --}}
@@ -98,7 +98,7 @@
         </div>
 
         <a href="#"
-            class="text-lg text-black w-full h-auto px-3 py-2 bg-white font-medium decoration-0 rounded-md capitalize">Contact Us</a>
+            class="text-lg text-black w-full h-auto px-3 py-2 bg-white font-medium decoration-0 rounded-md capitalize">Feedback</a>
     </div>
     <div class="w-full h-auto gap-5 flex justify-start items-center">
         @auth

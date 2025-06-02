@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> <!-- {{ $title }} !-->| Pamijahan IDN Organization Nimbly Student</title>
+    <title>{{ $title }} | Pamijahan IDN Organization Nimbly Student</title>
 
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 
@@ -32,6 +32,35 @@
 
         .scrollbar-hidden::-webkit-scrollbar {
             display: none;
+        }
+
+        .checkmark-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3.5rem;
+            /* Larger icon */
+            color: #FF3475;
+            /* Yellow color */
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            /* Subtle shadow for visibility */
+            opacity: 0;
+            /* Hidden by default */
+            transition: opacity 0.3s ease-in-out;
+            z-index: 10;
+            /* Ensure it's above the image */
+        }
+
+        /* Show checkmark when the sibling input is checked */
+        .peer:checked~.card-content .image-wrapper .checkmark-icon {
+            opacity: 1;
+        }
+
+        /* Dim image when the sibling input is checked */
+        .peer:checked~.card-content .image-wrapper img {
+            filter: brightness(60%);
+            /* Dim the image */
         }
     </style>
 
