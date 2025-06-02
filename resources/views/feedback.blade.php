@@ -17,18 +17,26 @@
                     </div>
                 </aside>
 
-                <form method="POST" class="w-full md:w-1/2 h-auto px-5 md:px-0 flex flex-col justify-center items-center">
+                <form method="POST" action="{{ route('feedback.store') }}" class="w-full md:w-1/2 h-auto px-5 md:px-0 flex flex-col justify-center items-center">
+                    @csrf
+
+                    @if (session('success'))
+                        <div class="w-full text-green-600 text-base font-semibold mb-4">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+                    
                     <h1 class="w-full mb-3 text-black text-3xl md:text-4xl text-center md:text-left font-bold font-nohemi tracking-wide capitalize">give feedback</h1>
 
                     <div class="w-full h-auto mb-5 gap-3 flex flex-col justify-center items-start">
                         <div class="w-full h-auto flex flex-col justify-center items-start">
                             <label for="feedback" class="w-full mb-2 text-black text-base text-left font-medium capitalize">subject</label>
-                            <input type="text" class="w-full h-auto py-2 px-4 border-2 border-black bg-white rounded-md text-black text-base" placeholder="Enter your subject">
+                            <input type="text" name="subject" class="w-full h-auto py-2 px-4 border-2 border-black bg-white rounded-md text-black text-base" placeholder="Enter your subject">
                         </div>
 
                         <div class="w-full h-auto flex flex-col justify-center items-start">
                             <label for="feedback" class="w-full mb-2 text-black text-base text-left font-medium capitalize">Do you have any thoughts you'd like to share?</label>
-                            <input type="text" class="w-full h-45 py-2 px-4 border-2 border-black bg-white rounded-md text-black text-base">
+                            <input type="text" name="content" class="w-full h-45 py-2 px-4 border-2 border-black bg-white rounded-md text-black text-base">
                         </div>
                     </div>
 
