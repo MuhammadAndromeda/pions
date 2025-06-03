@@ -2,23 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Feedback;
+use App\Models\Aspiration;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth as FacadesAuth;
 
 class FeedbackController extends Controller
 {
-    public function store(Request $request)
+    public function index()
     {
         $title = 'Feedback Form';
-        
+
+        return view('feedback', compact('title'));
+    }
+
+    public function store(Request $request)
+    {
         $request->validate([
             'subject' => 'required|string|max:255',
-            'content' => 'required|string|max:1000',
+            'message' => 'required|string|max:1000', // Atau 'content' jika Anda pilih Opsi B
         ]);
 
-        Feedback::create([
+        Aspiration::create([
+            'user_id' => FacadesAuth::id(), // <-- TAMBAHKAN INI
             'subject' => $request->subject,
-            'content' => $request->content,
+            'message' => $request->message, // Atau 'content'
         ]);
 
         return back()->with('success', 'Thank you for your feedback!');

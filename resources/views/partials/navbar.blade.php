@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="px-6 py-2 rounded-md text-md text-black font-normal capitalize">Feedback</a>
+        <a href="{{ route('feedback') }}" class="px-6 py-2 rounded-md text-md text-black font-normal capitalize">Feedback</a>
     </div>
     <div class="w-auto h-auto gap-5 flex justify-center items-center invisible lg:visible">
         @auth
@@ -99,7 +99,7 @@
             </div>
         </div>
 
-        <a href="#"
+        <a href="{{ route('feedback') }}"
             class="text-lg text-black w-full h-auto px-3 py-2 bg-white font-medium decoration-0 rounded-md capitalize">Feedback</a>
     </div>
     <div class="w-full h-auto gap-5 flex justify-start items-center">

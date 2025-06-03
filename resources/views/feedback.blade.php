@@ -1,12 +1,11 @@
 @extends('layouts.main')
 @section('content')
-    <body class="bg-blue-900 py-15">
-        <main class="w-full h-auto px-8 md:px-20 flex flex-col justify-center items-center">
+        <main class="w-full h-auto px-8 md:px-20 flex flex-col justify-center items-center bg-blue-900 py-15 pt-30">
             <section class="w-full h-auto mb-10 flex flex-col justify-center items-start">
                 <h1 class="text-white font-black text-4xl sm:text-6xl leading-tight font-nohemi tracking-wide capitalize">Please give <br>your <span class="font-medium font-nohemi">feedback</span></h1>
                 <p class="text-white text-base mt-2 leading-snug capitalize">Discover your division that you <br>like it and grown your abilty</p>
             </section>
-    
+
             <section class="w-full h-auto py-10 bg-white border-4 border-black rounded-3xl gap-10 flex flex-col md:flex-row justify-center items-center">
 
                 <aside class="w-max h-auto flex flex-col justify-center items-center">
@@ -36,7 +35,7 @@
 
                         <div class="w-full h-auto flex flex-col justify-center items-start">
                             <label for="feedback" class="w-full mb-2 text-black text-base text-left font-medium capitalize">Do you have any thoughts you'd like to share?</label>
-                            <input type="text" name="content" class="w-full h-45 py-2 px-4 border-2 border-black bg-white rounded-md text-black text-base">
+                            <input type="text" name="message" class="w-full h-45 py-2 px-4 border-2 border-black bg-white rounded-md text-black text-base">
                         </div>
                     </div>
 
@@ -47,5 +46,4 @@
 
             </section>
         </main>
-    </body>
 @endsection

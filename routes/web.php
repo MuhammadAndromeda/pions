@@ -10,10 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/feedback', function () {
-    return view('feedback');
-});
-
+Route::get('/feedback', [FeedbackController::class, 'index']);
 Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback');
 
 Route::get('/divisions/{slug}', [DivisionController::class, 'show'])->name('department');
