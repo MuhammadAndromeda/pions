@@ -26,6 +26,8 @@
             font-family: 'plus jakarta sans', serif;
         }
 
+        [x-cloak] { display: none !important; }
+
         .font-nohemi {
             font-family: 'nohemi', 'plus jakarta sans';
         }
