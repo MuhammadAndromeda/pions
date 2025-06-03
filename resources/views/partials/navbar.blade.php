@@ -27,6 +27,7 @@
                     <a href="{{ route('department', 'pr') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Public Relation Division</a>
                     <a href="{{ route('department', 'sports') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sports Division</a>
                     <a href="{{ route('department', 'cleanliness') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Cleanliness Division</a>
+                    <a href="{{ route('votings.index') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Votings</a>
                 </div>
             </div>
         </div>
@@ -93,6 +94,7 @@
                     <a href="{{ route('department', 'pr') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Public Relation Division</a>
                     <a href="{{ route('department', 'sports') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sports Division</a>
                     <a href="{{ route('department', 'cleanliness') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Cleanliness Division</a>
+                    <gs href="{{ route('votings.index') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Votings</gs>
                 </div>
             </div>
         </div>
