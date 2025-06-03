@@ -6,10 +6,10 @@
                 <p class="text-white text-base mt-2 leading-snug capitalize">Discover your division that you <br>like it and grown your abilty</p>
             </section>
 
-            <section class="w-full h-auto py-10 bg-white border-4 border-black rounded-3xl gap-10 flex flex-col md:flex-row justify-center items-center">
+            <section class="w-full h-auto py-10 bg-white border-4 border-black rounded-3xl gap-30 flex flex-col md:flex-row justify-center items-center">
 
                 <aside class="w-max h-auto flex flex-col justify-center items-center">
-                    <img src="{{ asset('images/logo-osis.png') }}" alt="" class="w-60 md:w-80 h-auto max-w-full mb-3">
+                    <img src="{{ asset('images/logo.svg') }}" alt="" class="w-60 md:w-80 h-auto max-w-full mb-3">
                     <div class="w-auto h-auto px-5 flex flex-col justify-center items-center md:items-start">
                         <h1 class="text-blue-800 text-3xl md:text-4xl text-center md:text-left font-bold capitalize">pamijahan IDN <br>organization <br>nimbly student</h1>
                         <p class="text-blue-800 text-lg text-center md:tel font-medium capitalize">SMK IDN boarding school bogor</p>

@@ -21,10 +21,46 @@
                         <p class="w-full mb-3 text-black text-sm text-justify font-medium capitalize">
                             {{ Str::limit(strip_tags($event->content), 150) }}
                         </p>
-                        <div class="w-full h-auto flex justify-center items-center">
-                            <a href="{{ route('event.show', $event->slug) }}" class="w-full h-auto py-3 rounded-full bg-pink-600 border-2 border-black text-white text-sm text-center font-bold capitalize">
+                        <div class="w-full h-auto flex flex-col gap-3 justify-center items-center">
+                            {{-- Tombol See More --}}
+                            <a href="{{ route('event.show', $event->slug) }}" class="w-full py-3 rounded-full bg-pink-600 border-2 border-black text-white text-sm text-center font-bold capitalize">
                                 see more
                             </a>
+
+                            {{-- Tombol Join Event --}}
+                            @auth
+                                @php
+                                    $hasJoined = \App\Models\Participant::where('user_id', auth()->id())
+                                        ->where('event_id', $event->id)
+                                        ->first();
+                                @endphp
+
+                                @if ($hasJoined)
+                                    @if ($hasJoined->status === 'approved')
+                                        <button class="w-full py-3 rounded-full bg-green-600 border-2 border-black text-white text-sm text-center font-bold capitalize" disabled>
+                                            joined (approved)
+                                        </button>
+                                    @else
+                                        <button class="w-full py-3 rounded-full bg-yellow-500 border-2 border-black text-white text-sm text-center font-bold capitalize" disabled>
+                                            waiting approval
+                                        </button>
+                                    @endif
+                                @else
+                                    <form action="{{ route('events.join', $event) }}" method="POST" class="w-full">
+                                        @csrf
+                                        <button type="submit" class="w-full py-3 rounded-full bg-[#EBBA38] hover:bg-yellow-500 border-2 border-black text-white text-sm text-center font-bold capitalize">
+                                            join event
+                                        </button>
+                                    </form>
+                                @endif
+                            @else
+                                {{-- Jika belum login --}}
+                                <a href="{{ route('login') }}"
+                                    onclick="alert('Silakan login terlebih dahulu untuk bergabung dengan event ini.')"
+                                    class="w-full py-3 rounded-full bg-[#EBBA38] hover:bg-yellow-500 border-2 border-black text-white text-sm text-center font-bold capitalize">
+                                    join event
+                                </a>
+                            @endauth
                         </div>
                     </div>
                 </div>

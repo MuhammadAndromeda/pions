@@ -37,3 +37,4 @@ Route::get('/news/{slug}', [NewsController::class, 'show'])->name('news.show');
 
 Route::get('/event', [EventController::class, 'index'])->name('event.index');
 Route::get('/event/{slug}', [EventController::class, 'show'])->name('event.show');
+Route::post('/events/{event}/join', [EventController::class, 'join'])->name('events.join');
