@@ -5,8 +5,8 @@
     <div
         class="w-auto h-auto mr-20 px-10 py-1 bg-white shadow-sm shadow-black/50 rounded-full gap-5 flex justify-center items-center invisible lg:visible">
         <a href="{{ route('home') }}" class="px-6 py-2 rounded-md text-md text-black font-normal capitalize">home</a>
-        <a href="{{ route('news') }}" class="px-6 py-2 rounded-md text-md text-black font-normal capitalize">news</a>
-        <a href="{{ route('event') }}" class="px-6 py-2 rounded-md text-md text-black font-normal capitalize">event</a>
+        <a href="{{ route('news.index') }}" class="px-6 py-2 rounded-md text-md text-black font-normal capitalize">news</a>
+        <a href="{{ route('event.index') }}" class="px-6 py-2 rounded-md text-md text-black font-normal capitalize">event</a>
         <a href="{{ route('apply') }}" class="px-6 py-2 rounded-md text-md text-black font-normal capitalize">apply</a>
 
         {{-- DROPdown About Us (Desktop) --}}
@@ -73,9 +73,9 @@
     <div class="w-full h-auto mb-10 gap-3 flex flex-col justify-center items-start">
         <a href="{{ route('home') }}"
             class="text-lg text-black w-full h-auto px-3 py-2 bg-white font-medium decoration-0 rounded-md capitalize">Home</a>
-        <a href="{{ route('news') }}"
+        <a href="{{ route('news.index') }}"
             class="text-lg text-black w-full h-auto px-3 py-2 bg-white font-medium decoration-0 rounded-md capitalize">News</a>
-        <a href="{{ route('event') }}"
+        <a href="{{ route('event.index') }}"
             class="text-lg text-black w-full h-auto px-3 py-2 bg-white font-medium decoration-0 rounded-md capitalize">Event</a>
 
         <a href="{{ route('apply') }}"
