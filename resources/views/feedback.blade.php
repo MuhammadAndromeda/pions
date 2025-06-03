@@ -17,7 +17,7 @@
                     </div>
                 </aside>
 
-                <form method="POST" action="{{ route('feedback.store') }}" class="w-full md:w-1/2 h-auto px-5 md:px-0 flex flex-col justify-center items-center">
+                <form method="POST" action="{{ route('feedback') }}" class="w-full md:w-1/2 h-auto px-5 md:px-0 flex flex-col justify-center items-center">
                     @csrf
 
                     @if (session('success'))
@@ -25,7 +25,7 @@
                             {{ session('success') }}
                         </div>
                     @endif
-                    
+
                     <h1 class="w-full mb-3 text-black text-3xl md:text-4xl text-center md:text-left font-bold font-nohemi tracking-wide capitalize">give feedback</h1>
 
                     <div class="w-full h-auto mb-5 gap-3 flex flex-col justify-center items-start">

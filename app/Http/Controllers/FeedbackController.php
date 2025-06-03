@@ -9,6 +9,8 @@ class FeedbackController extends Controller
 {
     public function store(Request $request)
     {
+        $title = 'Feedback Form';
+        
         $request->validate([
             'subject' => 'required|string|max:255',
             'content' => 'required|string|max:1000',
