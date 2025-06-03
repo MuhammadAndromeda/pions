@@ -68,7 +68,7 @@
 
 </head>
 
-<body class="h-full">
+<body class="h-full bg-blue-900">
     <div class="min-h-full">
 
         @include('partials.navbar')
