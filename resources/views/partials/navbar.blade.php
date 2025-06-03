@@ -1,4 +1,4 @@
-<nav class="w-full h-auto py-4 bg-blue-800/10 backdrop-blur-sm fixed top-0 flex justify-center items-center z-20">
+<nav class="w-full h-auto py-4 bg-transparent md:bg-blue-800/10 backdrop-blur-none md:backdrop-blur-sm fixed top-0 flex justify-center items-center z-20">
     <a href="{{ url('/') }}" class="decoration-0">
         <img src="{{ asset('images/logo_pions.svg') }}" class="w-20 h-auto max-w-full mr-50 invisible lg:visible">
     </a>
