@@ -22,4 +22,9 @@ class Vote extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function voter()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\VoteController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -27,3 +28,7 @@ Route::get('/register', [AuthController::class, 'registerView'])->name('register
 Route::post('/register', [AuthController::class, 'signUp']);
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/votings', [VoteController::class, 'index'])->name('votings.index');
+Route::get('/votings/{voting}', [VoteController::class, 'show'])->name('votings.show');
+Route::post('/votings/{voting}/vote', [VoteController::class, 'vote'])->name('votings.vote')->middleware('auth');
